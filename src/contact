@@ -1,0 +1,129 @@
+import React from 'react'
+import { useLocation } from 'react-router-dom';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+
+const Contact = () => {
+  const location = useLocation();
+
+  return (
+    <div>
+
+{/* contact section */}
+      <section className="donateprojects-section">
+        <Container className='px-xl-5'>
+          <Row className='justify-content-md-center'>
+            <Col lg="4" xl="4">
+              <div>
+                <div className="category-container">
+                  <p className="shadows-into-light text-secondary fw-semibold category-text text-capitalize">donate</p>
+                  <p className="text-uppercase fw-bold what-we-do-text"><i className="fa-solid fa-plus"></i> donate projects</p>
+                </div>
+                <h3 className='text-capitalize display-5 fw-semibold'>ready to get more information</h3>
+                <p className='text-secondary mt-4'>Sedut perspiciatis unde omnis natus voluptatem accusantium dolore dantiumy totam apeam eaquey quaventore veritatis architecto beatae.</p>
+                <div className='my-5'>
+                  <a href="/contact" className="btn donate-btn ms-3 fw-bold text-capitalize">get free quote <i className="fa-solid fa-arrow-right ms-2"></i></a>
+                </div>
+              </div>
+            </Col>
+            <Col lg="8" xl="7">
+              <Row className='justify-content-center align-items-center'>
+                <Col md="5" className='offset-xl-2'>
+                  <div>
+                    <div className='info-box text-center mx-3 p-2'>
+                      <div className='map-div'>
+                        <i className="bi bi-geo-alt fs-2 map-icon text-white rounded-circle p-3"></i>
+                      </div>
+                      <p className='text-capitalize fs-4 fw-bold mt-4'>our location</p>
+                      <p className='text-capitalize text-secondary px-4'>A-4, 15, Lower Indiranagar, bibwewadi, Pune</p>
+                    </div>
+                    <div className='info-box text-center mx-3 p-2'>
+                      <div className='map-div'>
+                        <i className="bi bi-envelope fs-2 map-icon text-white rounded-circle p-3"></i>
+                      </div>
+                      <p className='text-capitalize  fs-4 fw-bold  mt-4'>email address</p>
+                      <a href="mailto:support@gmail.com" className="text-decoration-none text-secondary ">support@gmail.com</a>
+                      <a href="www.teamkrb.com" className='text-decoration-none text-secondary d-block'>www.teamkrb.com</a>
+                    </div>
+                  </div>
+                </Col>
+                <Col md="5">
+                  <div>
+                    <div className='info-box text-center mx-3 p-2'>
+                      <div className='map-div'>
+                        <i className="bi bi-phone-vibrate fs-2 map-icon text-white rounded-circle p-3"></i>
+                      </div>
+                      <p className='text-capitalize fs-4 fs-4 fw-bold mt-4'>support 24/7</p>                      
+                      <a href="callto:+012 (345) 675 37
+                        012345687" className='text-decoration-none text-secondary px-2'>+012 (345) 675 37
+                        012345687</a>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+{/* maps & form section */}
+      <section className='contactform-section'>
+        <Container className='px-xl-5'>
+          <Row className='justify-content-center'>
+            {/* First Column - Map */}
+            <Col lg={5} className='me-0 pe-0'>
+              <div className="ratio ratio-1x1">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242117.70906969727!2d73.69815309340439!3d18.524870610788835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1748433442685!5m2!1sen!2sin"
+                  style={{ border: 0, height: '558px' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Pune Map"
+                />
+              </div>
+            </Col>
+
+            {/* Second Column - Form */}
+            <Col md={6} className="form-container p-4">
+              <h3 className="mb-4 fw-bold">Send Us Message</h3>
+              <Form>
+                <Row className="mb-3">
+                  <Col>
+                    <Form.Label className='fw-semibold'>Your Name</Form.Label>
+                    <Form.Control type="text" className='p-3' placeholder="Willie M. Stanley" />
+                  </Col>
+                  <Col>
+                    <Form.Label className='fw-semibold'>Phone Number</Form.Label>
+                    <Form.Control type="text" className='p-3' placeholder="Willie M. Stanley" />
+                  </Col>
+                </Row>
+                <Row className="mb-3">
+                  <Col>
+                    <Form.Label className='fw-semibold'>Email Address</Form.Label>
+                    <Form.Control type="email" className='p-3' placeholder="support@gmail.com" />
+                  </Col>
+                  <Col>
+                    <Form.Label className='fw-semibold'>Subject</Form.Label>
+                    <Form.Control type="text" className='p-3' placeholder="I would like to" />
+                  </Col>
+                </Row>
+                <Form.Group className="mb-4">
+                  <Form.Label className='fw-semibold'>Write Message</Form.Label>
+                  <Form.Control as="textarea" rows={4} className='p-3' placeholder="Hello" />
+                </Form.Group>
+                <Button
+                  type="submit"
+                  className="btn donate-btn ms-3 fw-bold text-capitalize"
+                >
+                  Send Us Message <i className="fa-solid fa-arrow-right ms-2"></i>
+                </Button>
+              </Form>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+    </div>
+  )
+}
+
+export default Contact
